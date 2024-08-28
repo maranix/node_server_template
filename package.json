@@ -1,15 +1,25 @@
 {
-  "name": "node_server_template",
-  "scripts": {
-    "dev": "tsx watch src/index.ts"
-  },
-  "dependencies": {
-    "@hono/node-server": "^1.12.2",
-    "hono": "^4.5.9"
-  },
-  "devDependencies": {
-    "@types/node": "^20.11.17",
-    "tsx": "^4.7.1"
-  },
-  "packageManager": "pnpm@9.8.0+sha512.8e4c3550fb500e808dbc30bb0ce4dd1eb614e30b1c55245f211591ec2cdf9c611cabd34e1364b42f564bd54b3945ed0f49d61d1bbf2ec9bd74b866fcdc723276"
+	"name": "node_server_template",
+	"scripts": {
+		"prepare": "lefthook install",
+		"dev": "tsx watch src/index.ts"
+	},
+	"dependencies": {
+		"@hono/node-server": "^1.12.2",
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.5",
+		"helmet": "^7.1.0",
+		"hono": "^4.5.9",
+		"hono-rate-limiter": "^0.4.0",
+		"http-status-code": "^2.1.0",
+		"winston": "^3.14.2",
+		"zod": "^3.23.8"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.8.3",
+		"@types/node": "^20.11.17",
+		"lefthook": "^1.7.14",
+		"tsx": "^4.7.1"
+	},
+	"packageManager": "pnpm@9.8.0+sha512.8e4c3550fb500e808dbc30bb0ce4dd1eb614e30b1c55245f211591ec2cdf9c611cabd34e1364b42f564bd54b3945ed0f49d61d1bbf2ec9bd74b866fcdc723276"
 }
