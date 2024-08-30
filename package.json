@@ -2,7 +2,10 @@
 	"name": "node_server_template",
 	"scripts": {
 		"prepare": "lefthook install",
-		"dev": "tsx watch src/server.ts"
+		"dev": "tsx watch src/server.ts",
+		"test": "vitest",
+		"test:ui": "vitest --ui",
+		"test:coverage": "vitest run --coverage"
 	},
 	"dependencies": {
 		"@hono/node-server": "^1.12.2",
@@ -17,8 +20,11 @@
 	"devDependencies": {
 		"@biomejs/biome": "1.8.3",
 		"@types/node": "^20.11.17",
+		"@vitest/coverage-v8": "^2.0.5",
+		"@vitest/ui": "^2.0.5",
 		"lefthook": "^1.7.14",
-		"tsx": "^4.7.1"
+		"tsx": "^4.7.1",
+		"vitest": "^2.0.5"
 	},
 	"packageManager": "pnpm@9.8.0+sha512.8e4c3550fb500e808dbc30bb0ce4dd1eb614e30b1c55245f211591ec2cdf9c611cabd34e1364b42f564bd54b3945ed0f49d61d1bbf2ec9bd74b866fcdc723276"
 }
